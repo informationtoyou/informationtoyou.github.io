@@ -1,59 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeShop</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!DOCTYPE html>
-	<title>WEshop</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-		}
-		.ribbon {
-			background-color: #BA8EC0;
-			height: 50px;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			padding: 0 20px;
-			box-shadow: 0 2px 5px rgba(0,0,0,0.25);
-			position: relative;
-		}
-		.ribbon::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background-image: linear-gradient(to right, #7FD2CA, #80CBC4);
-			z-index: -1;
-		}
-		.ribbon-title {
-			color: #fff;
-			font-size: 24px;
-			font-weight: bold;
-			font-family: 'Bahnschrift Semibold', sans-serif;
-		}
-		.ribbon-button {
-			background-color: transparent;
-			border: none;
-			color: #fff;
-			font-size: 16px;
-			font-weight: bold;
-			margin-left: 20px;
-			cursor: pointer;
-		}
-		.stripes {
-			background-image: linear-gradient(to right, #48C9B0, #1ABC9C);
-			height: 10px;
-		}
-	</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeShop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .ribbon {
+      background-color: #BA8EC0;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+      position: relative;
+    }
+    .ribbon::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(to right, #7FD2CA, #80CBC4);
+      z-index: -1;
+    }
+    .ribbon-title {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      font-family: 'Bahnschrift Semibold', sans-serif;
+    }
+    .ribbon-button {
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+    .stripes {
+      background-image: linear-gradient(to right, #48C9B0, #1ABC9C);
+      height: 10px;
+    }
+    
+    /* new styles for collapsible menu */
+    .ribbon-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #BA8EC0;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      z-index: 1;
+    }
+    .ribbon-links a {
+      margin: 5px 0;
+    }
+    .ribbon-menu-button {
+      display: none;
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    @media screen and (max-width: 768px) {
+      .ribbon-title,
+      .ribbon-button {
+        display: none;
+      }
+      .ribbon-menu-button {
+        display: block;
+      }
+      .ribbon-links {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="ribbon">
+    <button class="ribbon-menu-button">&#9776;</button>
+    <div class="ribbon-title">
+
 	<div class="ribbon">
 		<div class="ribbon-title">WeShop</div>
 		<div>
