@@ -1,2 +1,1 @@
-This is WeShop.
-That's it.
+This is WeShop, an online shop with everything at prices beating everything on the current market!
