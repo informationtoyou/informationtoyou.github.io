@@ -1,110 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WeShop</title>
-  <style>
-    body {
-      font-family: Calibri, sans-serif;
-      font-size: 24px;
-      margin: 0;
-    }
-    .header a {
-      color: white;
-      text-decoration: none;
-      margin-left: 10px; 
-    }
-
-    .header {
-      background-color: #d5b8e5;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-    }
-
-    .header h1 {
-      font-family: Bahnschrift Semibold, sans-serif;
-      margin: 0;
-    }
-
-    .header a {
-      color: black;
-      text-decoration: none;
-      margin-left: 10px;
-    }
-
-    .content {
-      padding: 20px;
-      text-align: center;
-    }
-
-    @media only screen and (max-width: 600px) {
-      .header {
-        flex-wrap: wrap;
-      }
-
-      .header h1 {
-        margin-bottom: 10px;
-      }
-
-      .header a {
-        margin-left: 0;
-        display: block;
-        margin-bottom: 10px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="header">
-    <h1>WeShop</h1>
-    <div>
-      <a href="https://informationtoyou.github.io">Home</a>
-      <a href="https://informationtoyou.github.io/orders">Order</a>
-      <a href="https://informationtoyou.github.io/shop">Shop</a>
-      <a href="https://informationtoyou.github.io/team">Meet the Team</a>
-      <a href="https://informationtoyou.github.io/about">About</a>
-    </div>
-  </div>
-  <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeShop</title>
-    <style>
-      h1 {
-        text-align: center;
-        font-family: Bahnschrift SemiBold;
-        font-size: 36px;
-      }
-      .buttons {
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 10px;
-      }
-      .button {
-        font-family: Bahnschrift SemiBold;
-        margin-left: 10px;
-        cursor: pointer;
-      }
-      p {
-        font-family: Calibri;
-        text-align: center;
-        margin-top: 30px;
-      }
-    </style>
-  </head>
+<head>
+	<title>WEshop</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		.ribbon {
+			background-color: #48C9B0;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 20px;
+			position: relative;
+		}
+		.ribbon::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image: linear-gradient(to right, #7FD2CA, #80CBC4);
+			z-index: -1;
+		}
+		.ribbon-title {
+			color: #fff;
+			font-size: 24px;
+			font-weight: bold;
+			font-family: 'Bahnschrift Semibold', sans-serif;
+		}
+		.ribbon-button {
+			background-color: #48C9B0;
+			border: none;
+			color: #FFFFFF;
+			font-size: 16px;
+			font-weight: bold;
+			margin-left: 20px;
+			cursor: pointer;
+			padding: 10px 20px;
+			border-radius: 5px;
+			transition: background-color 0.2s ease-in-out;
+		}
+		.ribbon-button:hover {
+			background-color: #48C9B0;
+			color: #fff;
+		}
+		.stripes {
+			background-image: linear-gradient(to right, #48C9B0, #1ABC9C);
+			height: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="ribbon">
+		<div class="ribbon-title">WEshop</div>
+		<div>
+						<a href="https://informationtoyou.github.io"><button class="ribbon-button">Home</button></a>
+            <a href="https://informationtoyou.github.io/team.html"><button class="ribbon-button">Meet the Team</button></a>
+			<a href="https://informationtoyou.github.io/about.html"><button class="ribbon-button">About Us</button></a>
+			<a href="https://informationtoyou.github.io/shop.html"><button class="ribbon-button">Visit our Shop</button></a>
+			<a href="https://informationtoyou.github.io/orders.html"><button class="ribbon-button">Order</button></a>
+		</div>
+	</div>
+</body>
+</html>
+
   <body>
-    <h1>WeShop</h1>
+   <center>
     <p>
       E-mail: info.weshop09@gmail.com<br>
       Or Contact on our WhatsApp Group (WE-buttek Questions)
     </p>
+    </center>
   </body>
 </html>
