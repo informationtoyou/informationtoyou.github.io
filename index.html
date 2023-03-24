@@ -1,70 +1,121 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<title>WEshop</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-		}
-		.ribbon {
-			background-color: #48C9B0;
-			height: 50px;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			padding: 0 20px;
-			box-shadow: 0 2px 5px rgba(0,0,0,0.25);
-			position: relative;
-		}
-		.ribbon::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background-image: linear-gradient(to right, #7FD2CA, #80CBC4);
-			z-index: -1;
-		}
-		.ribbon-title {
-			color: #fff;
-			font-size: 24px;
-			font-weight: bold;
-			font-family: 'Bahnschrift Semibold', sans-serif;
-		}
-		.ribbon-button {
-			background-color:#48C9B0;
-            border: none;
-			color: #FFFFFF;
-			font-size: 16px;
-			font-weight: bold;
-			margin-left: 20px;
-			cursor: pointer;
-			padding: 10px 20px;
-		}
-		.ribbon-button:hover {
-			background-color: #48C9B0;
-			color: #fff;
-		}
-		.stripes {
-			background-image: linear-gradient(to right, #48C9B0, #1ABC9C);
-			height: 10px;
-		}
-	</style>
-</head>
-<body>
-	<div class="ribbon">
-		<div class="ribbon-title">WeShop</div>
-		<div>
-			<a href="https://informationtoyou.github.io/team.html"><button class="ribbon-button">Meet the Team</button></a>
-			<a href="https://informationtoyou.github.io/about.html"><button class="ribbon-button">About Us</button></a>
-			<a href="https://informationtoyou.github.io/contact.html"><button class="ribbon-button">Contact Us</button></a>
-			<a href="https://informationtoyou.github.io/shop.html"><button class="ribbon-button">Visit our Shop</button></a>
-			<a href="https://informationtoyou.github.io/orders.html"><button class="ribbon-button">Order</button></a>
-		</div>
-	</div>
+<style>
+* {
+    box-sizing: border-box;
+    color: turquoise;
+}
 
-</body>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10%;
+    background: black;
+}
 
-</html>
+.header {
+    padding: 30px;
+    text-align: center;
+    background: black;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.topnav {
+    overflow: hidden;
+    color: black;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: turquoise;
+    text-align: center;
+    display: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+.rightcolumn {
+    float: right;
+    width: 25%;
+    background-color: #000000;
+    padding-left: 20px;
+}
+
+.card {
+    background-color: black;
+    padding: 20px;
+    margin-top: 20px;
+    display: center;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+    background: #000000;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #000000;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+    }
+
+@media  and (max: width 400px;) {
+    .topnav a {
+    float: none;
+    width: 100%;
+        }
+    }
+    </style>
+    </head>
+    <body>
+    
+    <div class="header">
+    <h1>WeShop</h1>
+    <p>Just for you.</p>
+    </div>
+
+    <div class="topnav">
+    <a href="https://informationtoyou.github.io/team.html">Meet the Team</a>
+    <a href="https://informationtoyou.github.io/about.html">About us</a>
+    <a href="https://informationtoyou.github.io/contact.html">Contact us</a>
+    <a href="https://informationtoyou.github.io/shop.html">Visit our shop</a>
+    <a href="https://informationtoyou.github.io/order.html">Order</a>
+</div>
+
+<div class="row::after">
+<div class="leftcolumn">
+<div class="card">
+<h2>What is WeShop?</h2>
+<h5>written by James Meeùs, CEO</h5>
+<p>WeShop is a company founded on the 6th of January, 2023, by James Meeùs, Atharva Pandey, and Ashwath Kanakampalayam. The objective of WeShop is to fullfill our clients demands, AND taking their money 😁</p>
+</div>
+<div class="card">
+<h2>What services do we offer?</h2>
+<h5>written by Atharva Pandey, CEO</h5>
+<p>WeShop offers a variety of services, from tech support to custom PC building, passing by custom 3D printed figurines and computer documents at a price beating any other.</p>
+</div>
+</div>
+<div class="rightcolumn">
+<div class="card">
+<h2>About us</h2>
+<p>WeShop is formed by 8 people: James Meeùs, Atharva Pandey, Ashwath Kanakampalayam, Ivor zeković, Marco di Pietro, Prakhar Singh, Stefanos Papageorgakopoulos, and Tomas Stanevicius.</p>
+
+<div class="footer">
+<p>Website made using Visual Studio Code©, w3schools, Github and Openai.</p>
