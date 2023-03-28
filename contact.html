@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>WEshop</title>
+	<title>WeShop</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 		body {
 			margin: 0;
 			padding: 0;
+			font-family: 'Calibri', sans-serif;
+			font-size: 13px;
 		}
 		.ribbon {
-			background-color: #48C9B0;
+			background-color: #B19CD9;
 			height: 50px;
 			display: flex;
 			align-items: center;
@@ -23,17 +27,18 @@
 			left: 0;
 			right: 0;
 			bottom: 0;
-			background-image: linear-gradient(to right, #7FD2CA, #80CBC4);
+			background-image: linear-gradient(to right, #D4A6F0, #B19CD9);
 			z-index: -1;
 		}
 		.ribbon-title {
 			color: #fff;
-			font-size: 24px;
+			font-size: 30px;
 			font-weight: bold;
 			font-family: 'Bahnschrift Semibold', sans-serif;
+			margin-top: 3px;
 		}
 		.ribbon-button {
-			background-color: #48C9B0;
+			background-color: #B19CD9;
 			border: none;
 			color: #FFFFFF;
 			font-size: 16px;
@@ -45,35 +50,36 @@
 			transition: background-color 0.2s ease-in-out;
 		}
 		.ribbon-button:hover {
-			background-color: #48C9B0;
+			background-color: #D4A6F0;
 			color: #fff;
 		}
-		.stripes {
-			background-image: linear-gradient(to right, #48C9B0, #1ABC9C);
-			height: 10px;
+		@media (max-width: 768px) {
+			.ribbon {
+				flex-wrap: wrap;
+				height: auto;
+			}
+			.ribbon-title {
+				margin-bottom: 10px;
+			}
+			.ribbon-button {
+				margin: 5px;
+			}
 		}
 	</style>
 </head>
 <body>
 	<div class="ribbon">
-		<div class="ribbon-title">WEshop</div>
+		<div class="ribbon-title">WeShop</div>
 		<div>
-						<a href="https://informationtoyou.github.io"><button class="ribbon-button">Home</button></a>
-            <a href="https://informationtoyou.github.io/team.html"><button class="ribbon-button">Meet the Team</button></a>
-			<a href="https://informationtoyou.github.io/about.html"><button class="ribbon-button">About Us</button></a>
+			<a href="https://informationtoyou.github.io/team.html"><button class="ribbon-button">Meet the Team</button></a>
+			<a href="https://informationtoyou.github.io/"><button class="ribbon-button">Home</button></a>
+			<a href="https://informationtoyou.github.io/contact.html"><button class="ribbon-button">Contact Us</button></a>
 			<a href="https://informationtoyou.github.io/shop.html"><button class="ribbon-button">Visit our Shop</button></a>
 			<a href="https://informationtoyou.github.io/orders.html"><button class="ribbon-button">Order</button></a>
 		</div>
 	</div>
+	<div class="stripes"></div>
+<h1>Contact us by E-Mail: <a href="mailto:info.weshop09@gmail.com">info.weshop09@gmail.com</a></h1>
+<h1>Or message us on the WeShop Chat WhatsApp Group</h1>
 </body>
-</html>
-
-  <body>
-   <center>
-    <p>
-      E-mail: info.weshop09@gmail.com<br>
-      Or Contact on our WhatsApp Group (WE-buttek Questions)
-    </p>
-    </center>
-  </body>
 </html>
