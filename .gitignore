@@ -1,2 +1,6 @@
 # ignore all .txt files
 *.txt
+# ignore all .docx files
+*.docx
+# ignore all .png files
+*.png
