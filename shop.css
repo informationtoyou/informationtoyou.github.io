@@ -75,11 +75,15 @@ h3 {
     }
 }
 
-/*BahnSchrift SemiBold Font Addition*/
+/*BahnSchrift Font Addition*/
 
 @font-face {
-    font-family: 'Bahnschrift SemiBold';
+    font-family: 'Bahnschrift';
     src: url(BAHNSCHRIFT.TTF) format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+h1 {
+    font-family: 'Bahnschrift', sans-serif;
 }
