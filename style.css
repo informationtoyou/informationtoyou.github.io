@@ -5,6 +5,20 @@ body {
     font-size: 13px;
     margin-left: 6px;
 }
+h2 {
+    color: black;
+    font-size: 17px;
+    text-decoration: underline;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+h3 {
+    color: black;
+    font-size: 13px;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+} 
 .ribbon {
     background-color: #B19CD9;
     height: 50px;
