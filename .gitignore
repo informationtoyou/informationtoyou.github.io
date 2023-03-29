@@ -4,3 +4,5 @@
 *.docx
 # ignore all .png files
 *.png
+# ignore all .pdf files
+*.pdf
