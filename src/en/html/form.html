@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>WeShop Orders</title>
+        <style>*{margin:0;padding:0;} html,body,iframe{border-radius:0 !important;}</style>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Calibri', sans-serif;
+                font-size: 13px;
+                margin-left: 6px;
+            }
+            h2 {
+                color: black;
+                font-size: 17px;
+                text-decoration: underline;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+            h3 {
+                color: black;
+                font-size: 13px;
+                text-decoration: none;
+                margin-left: 5px;
+                margin-right: 5px;
+            } 
+            .ribbon {
+                background-color: #B19CD9;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 20px;
+                position: relative;
+            }
+            .ribbon::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: linear-gradient(to right, #D4A6F0, #B19CD9);
+                z-index: -1;
+            }
+            .ribbon-title {
+                color: #fff;
+                font-size: 30px;
+                font-weight: bold;
+                font-family: 'Bahnschrift Semibold', sans-serif;
+                margin-top: 3px;
+            }
+            .ribbon-button {
+                background-color: #B19CD9;
+                border: none;
+                color: #FFFFFF;
+                font-size: 16px;
+                font-weight: bold;
+                margin-left: 20px;
+                cursor: pointer;
+                padding: 10px 20px;
+                border-radius: 5px;
+                transition: background-color 0.2s ease-in-out;
+            }
+            .ribbon-button:hover {
+                background-color: #D4A6F0;
+                color: #fff;
+            }
+            @media (max-width: 768px) {
+                .ribbon {
+                    flex-wrap: wrap;
+                    height: auto;
+                }
+                .ribbon-title {
+                    margin-bottom: 10px;
+                }
+                .ribbon-button {
+                    margin: 5px;
+                }
+            }
+    
+        </style>
+    </head>
+    <body>
+        <div class="ribbon">
+            <div class="ribbon-title">WeShop</div>
+            <div>
+                <a href="https://informationtoyou.github.io/src/en/html/team.html"><button class="ribbon-button">Meet the Team</button></a>
+                <a href="https://informationtoyou.github.io/"><button class="ribbon-button">Home</button></a>
+                <a href="https://informationtoyou.github.io/src/en/html/shop.html"><button class="ribbon-button">Shop</button></a>
+                <a href="https://informationtoyou.github.io/src/en/html/orders.html"><button class="ribbon-button">Order</button></a>
+            </div>
+        </div>
+        <div class="stripes"></div>
+      </head>
+      <body>
+        <div data-tf-widget="pH19wvnj" data-tf-opacity="100" data-tf-inline-on-mobile data-tf-iframe-props="title=WeShop Orders" data-tf-transitive-search-params data-tf-auto-focus data-tf-medium="snippet" data-tf-full-screen></div><script src="//embed.typeform.com/next/embed.js"></script>
+      </body>
+    </html>
