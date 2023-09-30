@@ -1,65 +1,60 @@
 import pygame
-import sys
+import random
+import math
+
+# Constants
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+TARGET_SIZE = 30
+TARGET_COLOR = (255, 0, 0)
+BACKGROUND_COLOR = (0, 0, 0)
+FPS = 60
 
 # Initialize Pygame
 pygame.init()
-
-# Constants for the screen size
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 400
-
-# Colors
-WHITE = (255, 255, 255)
-
-# Create the screen
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption("Cat Running")
+pygame.display.set_caption("Aim Trainer")
 
-# Load the cat sprite
-cat_image = pygame.image.load("Scratchcat.png")  # Make sure you have an image of the cat
+# Functions
+def spawn_target():
+    x = random.randint(TARGET_SIZE, SCREEN_WIDTH - TARGET_SIZE)
+    y = random.randint(TARGET_SIZE, SCREEN_HEIGHT - TARGET_SIZE)
+    return x, y
 
-# Set up initial cat position and movement variables
-cat_x = 0
-cat_speed = 5
-moving_right = True
-round_trip = 0
+def distance(x1, y1, x2, y2):
+    return math.sqrt((x1 - x2)**2 + (y1 - y2)**2)
 
-# Create a clock object to control the frame rate
+# Game variables
+targets = []
+score = 0
+font = pygame.font.Font(None, 36)
+
+# Main game loop
 clock = pygame.time.Clock()
-
 running = True
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            for target in targets:
+                if distance(target[0], target[1], event.pos[0], event.pos[1]) < TARGET_SIZE:
+                    targets.remove(target)
+                    score += 1
 
-    # Clear the screen
-    screen.fill(WHITE)
+    if len(targets) < 5:
+        targets.append(spawn_target())
 
-    # Update cat position
-    if moving_right:
-        cat_x += cat_speed
-    else:
-        cat_x -= cat_speed
+    screen.fill(BACKGROUND_COLOR)
 
-    # Check if the cat reaches the right end
-    if cat_x >= SCREEN_WIDTH:
-        moving_right = False
-        round_trip += 1
-    elif cat_x <= 0:
-        moving_right = True
-        if round_trip > 0:
-            print("Meow")  # Print "Meow" after each round trip
+    for target in targets:
+        pygame.draw.circle(screen, TARGET_COLOR, target, TARGET_SIZE)
 
-    # Blit the cat on the screen
-    screen.blit(cat_image, (cat_x, 300))  # 300 is the y-coordinate for the floor
+    score_text = font.render(f"Score: {score}", True, (255, 255, 255))
+    screen.blit(score_text, (10, 10))
 
-    # Update the screen
     pygame.display.flip()
-
-    # Control the frame rate
-    clock.tick(60)
+    clock.tick(FPS)
 
 # Quit Pygame
 pygame.quit()
-sys.exit()
