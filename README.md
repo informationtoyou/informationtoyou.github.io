@@ -1,1 +1,0 @@
-This is WeShop, an online shop with everything at prices beating everything on the current market!
